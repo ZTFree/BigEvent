@@ -84,10 +84,4 @@ $(() => {
             }
         })
     })
-
-    function show_msg(res) {
-        const layer = layui.layer;
-        layer.msg(res.message);
-    }
-
 })

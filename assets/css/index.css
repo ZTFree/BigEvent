@@ -1,0 +1,49 @@
+.iconfont {
+    margin-right: 8px;
+}
+
+.layui-icon {
+    margin-right: 8px;
+    margin-left: 20px;
+}
+
+.layui-body {
+    overflow: hidden;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+ul>.user_info {
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 20px;
+    user-select: none;
+    /* background-color: pink; */
+    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 10px 0 0 black; */
+}
+
+.user_info img {
+    display: none;
+}
+
+.welcome {
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.avatar {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    background-color: red;
+    border-radius: 15px;
+    vertical-align: middle;
+}
