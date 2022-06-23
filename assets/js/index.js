@@ -24,12 +24,8 @@ function getUserInfo() {
             }
             // console.log(res.data);
             renderAvatar(res.data);
-        },
-        complete: (res) => {
-            if (res.responseJSON.status === 1) {
-                location.href = '/login.html';
-            }
         }
+
     })
 }
 
@@ -45,8 +41,5 @@ function renderAvatar(user) {
         $('.user_info img').show().prop('src', pic);
         $('.user_info avatar').hide();
     }
-
-
-
 
 }
