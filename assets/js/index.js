@@ -1,21 +1,34 @@
 $(() => {
     getUserInfo();
-    // console.log(123);
+    $('#exit').on('click', Exit);
 })
+
+function Exit() {
+    const layer = layui.layer;
+
+    layer.confirm('确定退出登录?', { icon: 3, title: '提示' }, () => {
+        localStorage.removeItem('token');
+        location.href = '/login.html';
+    }, (index) => {
+        layer.close(index);
+    });
+}
 
 function getUserInfo() {
     $.ajax({
         method: 'GET',
         url: '/my/userinfo',
-        headers: {
-            Authorization: localStorage.getItem('token') || ''
-        },
         success: (res) => {
             if (res.status !== 0) {
                 return show_msg(res);
             }
-            console.log(res.data);
+            // console.log(res.data);
             renderAvatar(res.data);
+        },
+        complete: (res) => {
+            if (res.responseJSON.status === 1) {
+                location.href = '/login.html';
+            }
         }
     })
 }
