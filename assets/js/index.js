@@ -36,7 +36,7 @@ function renderAvatar(user) {
     $('.welcome').html(`欢迎&nbsp;&nbsp;${name}`);
     if (!pic) {
         $('.user_info img').hide();
-        $('.user_info avatar').show().html(name[0].toUpperCase());
+        $('.user_info .avatar').show().html((name)[0].toUpperCase());
     } else {
         $('.user_info img').show().prop('src', pic);
         $('.user_info avatar').hide();
