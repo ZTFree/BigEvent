@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表
+
+
+        </div>
+        <button type="button" class="layui-btn" id="filter">筛选</button>
+        <div class="layui-card-body">
+            <!-- 筛选器 -->
+            <!-- 列表区 -->
+            <table class="layui-table">
+                <colgroup>
+
+                    <col width="400">
+                    <col width="180">
+                    <col width="180">
+                    <col width="180">
+                    <col>
+
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>文章标题</th>
+                        <th>分类</th>
+                        <th>发表时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="class_body">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>
+                            <button type="button" class="layui-btn layui-btn layui-btn-sm" id="edit">编辑</button>
+                            <button type="button" class="layui-btn layui-btn-danger layui-btn layui-btn-sm" id="delete">删除</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <!-- 分页区 -->
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../assets/lib/layui/layui.all.js"></script>
+
+<script src="../assets/lib/template-web.js"></script>
+
+<script type="text/html" id="row">
+    {{each data}}
+    <tr data-id="{{$value.Id}}" data-status="{{$value.is_delete}}">
+        <td>{{$value.title}}</td>
+        <td>{{$value.cate_id}}</td>
+        <td>{{$value.content}}</td>
+        <td>{{$value.state}}</td>
+        <td>
+            <button type="button" class="layui-btn layui-btn-sm" id="updateClass">编辑</button>
+            <button type="button" class="layui-btn layui-btn-danger layui-btn-sm" id="deleteClass">删除</button>
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+
+
+
+<script src="../assets/lib/jquery.js"></script>
+<script src="../assets/js/baseAPI.js"></script>
+<script src="./js/list.js"></script>

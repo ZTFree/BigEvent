@@ -1,0 +1,17 @@
+body {
+    background-color: rgba(219, 219, 219, 0.378);
+}
+
+.layui-card {
+    margin: 15px;
+}
+
+.layui-card-header .layui-btn {
+    float: right;
+    margin-top: 6px;
+}
+
+.layui-form {
+    margin-top: 30px;
+    padding-right: 80px;
+}
