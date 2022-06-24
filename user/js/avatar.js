@@ -25,17 +25,21 @@ $(() => {
 
         $image.cropper('destroy').attr('src', newImgURL).cropper(options);
 
-        // console.log(files);
-        // $('#image').prop('src', $('#loadImg').val());
     })
 
     $('#change').on('click', (e) => {
         e.preventDefault();
+
+        const dataURL = $image.cropper('getCroppedCanvas', {
+            width: 100,
+            height: 100
+        }).toDataURL('image/png');
+
         $.ajax({
             method: "POST",
             url: "/my/update/avatar",
             data: {
-                avatar: ''
+                avatar: dataURL
             },
             success: (res) => {
                 if (res.status !== 0) {

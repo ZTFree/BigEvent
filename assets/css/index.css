@@ -26,19 +26,16 @@ ul>.user_info {
     /* box-shadow: 0 10px 0 0 black; */
 }
 
-.user_info img {
-    display: none;
-}
-
 .welcome {
     vertical-align: middle;
     font-size: 18px;
 }
 
-.avatar {
+.user_info .avatar,
+.user_info img {
     display: inline-block;
     height: 30px;
-    width: 30px;
+    height: 30px;
     margin-right: 8px;
     text-align: center;
     line-height: 30px;
