@@ -16,11 +16,7 @@ $(() => {
         $.ajax({
             method: 'POST',
             url: '/my/userinfo',
-            data: {
-                id: fd.get('id'),
-                nickname: fd.get('nickname'),
-                email: fd.get('email')
-            },
+            data: $('#user_form').serialize(),
             success: (res) => {
                 if (res.status !== 0) {
                     return show_msg(res);

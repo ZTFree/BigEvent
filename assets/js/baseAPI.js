@@ -7,8 +7,8 @@ $(() => {
                 Authorization: localStorage.getItem('token') || ''
             };
             options.complete = (res) => {
-                if (res.responseJSON.status === 1) {
-                    location.href = '/login.html';
+                if (res.responseJSON.status !== 0) {
+                    // location.href = '/login.html';
                 }
             };
         }

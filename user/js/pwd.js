@@ -18,10 +18,7 @@ $(() => {
         $.ajax({
             method: 'POST',
             url: '/my/updatepwd',
-            data: {
-                oldPwd: fd.get('oldPwd'),
-                newPwd: fd.get('newPwd')
-            },
+            data: $('#pwd_form').serialize(),
             success: (res) => {
                 if (res.status !== 0) {
                     return show_msg(res);
