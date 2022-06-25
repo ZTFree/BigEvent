@@ -10,3 +10,7 @@ body {
     float: right;
     margin-top: 6px;
 }
+
+.layui-inline {
+    /* width: 200px; */
+}

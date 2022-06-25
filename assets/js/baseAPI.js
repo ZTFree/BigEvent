@@ -8,7 +8,7 @@ $(() => {
             };
             options.complete = (res) => {
                 if (res.responseJSON.status !== 0) {
-                    // location.href = '/login.html';
+                    window.parent.location.href = '/login.html';
                 }
             };
         }

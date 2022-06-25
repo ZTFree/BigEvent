@@ -6,9 +6,9 @@ $(() => {
     }
     $image.cropper(options);
 
+    // 更换头像图片
     $('#load').on('click', (e) => {
         e.preventDefault();
-        // console.log(123);
         $('#loadImg').click();
 
     })
@@ -27,6 +27,7 @@ $(() => {
 
     })
 
+    // 上传头像
     $('#change').on('click', (e) => {
         e.preventDefault();
 
